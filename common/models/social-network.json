@@ -1,0 +1,33 @@
+{
+  "name": "SocialNetwork",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "network": {
+      "type": "string"
+    },
+    "networkHandle": {
+      "type": "string"
+    },
+    "joined": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "socialWriter": {
+      "type": "belongsTo",
+      "model": "Writer",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Book",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "from": {
+      "type": "date"
+    },
+    "to": {
+      "type": "date"
+    },
+    "userId": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "writer": {
+      "type": "belongsTo",
+      "model": "Writer",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

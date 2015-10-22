@@ -1,0 +1,32 @@
+{
+  "name": "Writer",
+  "base": "User",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "books": {
+      "type": "hasMany",
+      "model": "Book",
+      "foreignKey": "id"
+    },
+    "socialNetworks": {
+      "type": "hasMany",
+      "model": "SocialNetwork",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
