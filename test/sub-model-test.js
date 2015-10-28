@@ -60,11 +60,13 @@ describe('sub-model include error', function() {
           scope: {
             include: {
               relation: 'socialNetworks',
-              where: {
-                and: [
-                {network: network },
-                {joined: {between: [initialDate, endDate]}},
-                ],
+              scope: {
+                where: {
+                  and: [
+                  {network: network },
+                  {joined: {between: [initialDate, endDate]}},
+                  ],
+                },
               },
             },
           },
